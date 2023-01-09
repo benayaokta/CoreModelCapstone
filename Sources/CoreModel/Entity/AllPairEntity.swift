@@ -6,17 +6,17 @@
 //
 
 public struct AllPairEntity: Codable {
-    let coinSymbol: String
-    let baseCurrency: String
-    let description: String
-    let coinID: String
-    let coinGeckoID: String
-    let tickerID: String
-    let priceRound: Int
-    let hasMemo: Bool
-    let imageURL: String
-    let tradeCurrencyUnit: String
-    let isMaintenance: Bool
+    public let coinSymbol: String
+    public let baseCurrency: String
+    public let description: String
+    public let coinID: String
+    public let coinGeckoID: String
+    public let tickerID: String
+    public let priceRound: Int
+    public let hasMemo: Bool
+    public let imageURL: String
+    public let tradeCurrencyUnit: String
+    public let isMaintenance: Bool
 
     public init(coinSymbol: String,
          baseCurrency: String,

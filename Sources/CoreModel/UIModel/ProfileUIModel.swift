@@ -8,11 +8,11 @@
 import UIKit.UIImage
 
 public struct ProfileUIModel {
-    let name: String
-    let age: Int
-    let occupation: String
-    let workAt: String
-    let photo: UIImage
+    public let name: String
+    public let age: Int
+    public let occupation: String
+    public let workAt: String
+    public let photo: UIImage
     
 
     public init(name: String, age: Int, occupation: String, workAt: String, photo: UIImage) {

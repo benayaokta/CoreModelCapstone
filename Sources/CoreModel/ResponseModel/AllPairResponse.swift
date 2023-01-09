@@ -6,16 +6,16 @@
 //
 
 public struct AllPairsResponse: Codable {
-    let coinID, coinSymbol, baseCurrency, tradedCurrency: String
-    let tradedCurrencyUnit, coinDescription, tickerID: String
-    let volumePrecision, pricePrecision, priceRound, pricescale: Int
-    let tradeMinBaseCurrency: Int
-    let tradeMinTradedCurrency: Double
-    let hasMemo: Bool
-    let tradeFeePercent: Double
-    let urlLogoPNG: String
-    let isMaintenance: Int
-    let coinGeckoID: String?
+    public let coinID, coinSymbol, baseCurrency, tradedCurrency: String
+    public let tradedCurrencyUnit, coinDescription, tickerID: String
+    public let volumePrecision, pricePrecision, priceRound, pricescale: Int
+    public let tradeMinBaseCurrency: Int
+    public let tradeMinTradedCurrency: Double
+    public let hasMemo: Bool
+    public let tradeFeePercent: Double
+    public let urlLogoPNG: String
+    public let isMaintenance: Int
+    public let coinGeckoID: String?
     
     enum CodingKeys: String, CodingKey {
         case coinID = "id"
