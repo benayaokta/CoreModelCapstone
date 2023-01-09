@@ -8,17 +8,17 @@
 import Foundation
 import CoreExtension
 
-struct AllPairModel: Codable {
-    let coinID, coinSymbol, baseCurrency, tradedCurrency: String
-    let tradedCurrencyUnit, coinDescription, tickerID: String
-    let volumePrecision, pricePrecision, priceRound, pricescale: Int
-    let tradeMinBaseCurrency: Int
-    let tradeMinTradedCurrency: Double
-    let hasMemo: Bool
-    let tradeFeePercent: Double
-    let urlLogoPNG: String
-    let isMaintenance: Int
-    let coinGeckoID: String?
+public struct AllPairModel: Codable {
+    public let coinID, coinSymbol, baseCurrency, tradedCurrency: String
+    public let tradedCurrencyUnit, coinDescription, tickerID: String
+    public let volumePrecision, pricePrecision, priceRound, pricescale: Int
+    public let tradeMinBaseCurrency: Int
+    public let tradeMinTradedCurrency: Double
+    public let hasMemo: Bool
+    public let tradeFeePercent: Double
+    public let urlLogoPNG: String
+    public let isMaintenance: Int
+    public let coinGeckoID: String?
     
     enum CodingKeys: String, CodingKey {
         case coinID = "id"
@@ -41,7 +41,7 @@ struct AllPairModel: Codable {
         case coinGeckoID = "coingecko_id"
     }
     
-    init(coinID: String,
+    public init(coinID: String,
          coinSymbol: String,
          baseCurrency: String,
          tradedCurrency: String,
@@ -79,7 +79,7 @@ struct AllPairModel: Codable {
         self.coinGeckoID = coinGeckoID
     }
     
-    static func mapResponseToModel(array: [AllPairsResponse]) -> [AllPairModel] {
+    public static func mapResponseToModel(array: [AllPairsResponse]) -> [AllPairModel] {
         var model: [AllPairModel] = []
         model = array.compactMap({ list in
             return AllPairModel(coinID: list.coinID,

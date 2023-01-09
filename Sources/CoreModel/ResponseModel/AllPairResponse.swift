@@ -5,7 +5,7 @@
 //  Created by Benaya Oktavianus on 24/11/22.
 //
 
-struct AllPairsResponse: Codable {
+public struct AllPairsResponse: Codable {
     let coinID, coinSymbol, baseCurrency, tradedCurrency: String
     let tradedCurrencyUnit, coinDescription, tickerID: String
     let volumePrecision, pricePrecision, priceRound, pricescale: Int
@@ -38,7 +38,7 @@ struct AllPairsResponse: Codable {
         case coinGeckoID = "coingecko_id"
     }
     
-    init(coinID: String,
+    public init(coinID: String,
          coinSymbol: String,
          baseCurrency: String,
          tradedCurrency: String,

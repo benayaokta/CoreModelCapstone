@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct AllPairUIModel: Codable {
+public struct AllPairUIModel: Codable {
     let coinSymbol: String
     let baseCurrency: String
     let description: String
@@ -20,7 +20,7 @@ struct AllPairUIModel: Codable {
     let tradeCurrencyUnit: String
     let isMaintenance: Bool
 
-    init(coinSymbol: String,
+    public init(coinSymbol: String,
          baseCurrency: String,
          description: String,
          coinID: String,
@@ -44,7 +44,7 @@ struct AllPairUIModel: Codable {
         self.isMaintenance = isMaintenance
     }
 
-    static func mapEntityToUIModel(array: [AllPairEntity]) -> [AllPairUIModel] {
+    public static func mapEntityToUIModel(array: [AllPairEntity]) -> [AllPairUIModel] {
         var entity: [AllPairUIModel] = []
         entity = array.compactMap({ AllPairUIModel(coinSymbol: $0.coinSymbol,
                                                   baseCurrency: $0.baseCurrency,
@@ -62,7 +62,7 @@ struct AllPairUIModel: Codable {
         
     }
     
-    static func mapModelToUIModel(array: [AllPairModel]) -> [AllPairUIModel] {
+    public static func mapModelToUIModel(array: [AllPairModel]) -> [AllPairUIModel] {
         var entity: [AllPairUIModel] = []
         entity = array.compactMap({ AllPairUIModel(coinSymbol: $0.coinSymbol,
                                                   baseCurrency: $0.baseCurrency,

@@ -5,7 +5,7 @@
 //  Created by Benaya Oktavianus on 08/12/22.
 //
 
-struct AllPairEntity: Codable {
+public struct AllPairEntity: Codable {
     let coinSymbol: String
     let baseCurrency: String
     let description: String
@@ -18,7 +18,7 @@ struct AllPairEntity: Codable {
     let tradeCurrencyUnit: String
     let isMaintenance: Bool
 
-    init(coinSymbol: String,
+    public init(coinSymbol: String,
          baseCurrency: String,
          description: String,
          coinID: String,
@@ -42,7 +42,7 @@ struct AllPairEntity: Codable {
         self.isMaintenance = isMaintenance
     }
     
-    init() {
+    public init() {
         self.coinSymbol = ""
         self.baseCurrency = ""
         self.description = ""
@@ -56,7 +56,7 @@ struct AllPairEntity: Codable {
         self.isMaintenance = false
     }
     
-    static func mapUIModelToEntity(array: [AllPairUIModel]) -> [AllPairEntity] {
+    public static func mapUIModelToEntity(array: [AllPairUIModel]) -> [AllPairEntity] {
         var entity: [AllPairEntity] = []
         entity = array.compactMap({ AllPairEntity(coinSymbol: $0.coinSymbol,
                                                   baseCurrency: $0.baseCurrency,
@@ -73,7 +73,7 @@ struct AllPairEntity: Codable {
         return entity
     }
     
-    static func mapUIModelToEntity(pair: AllPairUIModel) -> AllPairEntity {
+    public static func mapUIModelToEntity(pair: AllPairUIModel) -> AllPairEntity {
         let entity: AllPairEntity = AllPairEntity(coinSymbol: pair.coinSymbol,
                                                   baseCurrency: pair.baseCurrency,
                                                   description: pair.description,

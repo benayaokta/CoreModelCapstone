@@ -7,7 +7,7 @@
 
 import UIKit.UIImage
 
-struct ProfileEntity {
+public struct ProfileEntity {
     let name: String
     let age: Int
     let occupation: String
@@ -15,7 +15,7 @@ struct ProfileEntity {
     let photo: UIImage
     
 
-    init(name: String, age: Int, occupation: String, workAt: String, photo: UIImage) {
+    public init(name: String, age: Int, occupation: String, workAt: String, photo: UIImage) {
         self.name = name
         self.age = age
         self.occupation = occupation
@@ -23,7 +23,7 @@ struct ProfileEntity {
         self.photo = photo
     }
     
-    init() {
+    public init() {
         self.name = ""
         self.age = 0
         self.occupation = ""
@@ -31,7 +31,7 @@ struct ProfileEntity {
         self.photo = UIImage()
     }
     
-    static func mapUIModelToEntity(model: ProfileUIModel) -> ProfileEntity {
+    public static func mapUIModelToEntity(model: ProfileUIModel) -> ProfileEntity {
         return ProfileEntity(name: model.name,
                              age: model.age,
                              occupation: model.occupation,
